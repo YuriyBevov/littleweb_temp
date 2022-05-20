@@ -1,6 +1,6 @@
-form(action="#" method="POST")
-  input(type="text" placeholder="Ваше имя*" data-required="true")
-  input(type="text" placeholder="Электронная почта")
-  input(type="tel" placeholder="Номер телефона*" data-required="true")
+form(action="./mail.php" method="POST")
+  input(type="text" placeholder="Ваше имя*" data-required="true" id="user_name")
+  input(type="text" placeholder="Электронная почта" id="user_mail")
+  input(type="tel" placeholder="Номер телефона*" data-required="true" id="user_phone")
 
   button(type="submit") Оставить заявку

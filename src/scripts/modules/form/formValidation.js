@@ -1,6 +1,7 @@
 import { setControlState } from "./setControlState";
 import { sendForm } from "./sendForm";
 
+const loader = document.querySelector('.loader-overlay');
 export function formValidation(form) {
   let invalidControls = []
   let controls = form.querySelectorAll('input');
@@ -30,7 +31,7 @@ export function formValidation(form) {
   })
 
   if(!invalidControls.length) {
-    console.log('SEND FORM')
+    loader.classList.remove('hidden');
     sendForm(form);
   } else {
     invalidControls.forEach(control => {

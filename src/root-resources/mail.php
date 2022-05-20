@@ -4,14 +4,14 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-$title = "Тема письма";
+$title = "Тема письма test";
 $file = $_FILES['file'];
 
 $c = true;
 // Формирование самого письма
-$title = "Заголовок письма";
+$title = "Новая заявка с сайта LittleWeb.ru !";
 foreach ( $_POST as $key => $value ) {
-  if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+  if ( $value != "" ) {
     $body .= "
     " . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
       <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
@@ -32,16 +32,17 @@ try {
   $mail->SMTPAuth   = true;
 
   // Настройки вашей почты
-  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = ''; // Логин на почте
-  $mail->Password   = ''; // Пароль на почте
+  $mail->Host       = 'smtp.timeweb.ru'; // SMTP сервера вашей почты
+  $mail->Username   = 'info@littleweb.ru'; // Логин на почте
+  $mail->Password   = 'Kerqw623N_001'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('info@littleweb.ru', 'Заявка с сайта LittleWeb.ru'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('');
+  $mail->addAddress('yuriybevov@gmail.com', 'Юрий Бевов');
+  $mail->AddAddress('info@littleweb.ru', 'Команда LittleWeb');
 
   // Прикрипление файлов к письму
   if (!empty($file['name'][0])) {
@@ -67,3 +68,6 @@ try {
 } catch (Exception $e) {
   $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
+
+// Отображение результата
+echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
