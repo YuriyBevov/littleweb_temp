@@ -1,0 +1,14 @@
+/* Базовые подключения */
+@import "vendor";
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "global";
+@import "extends";
+@import 'common-styles';
+
+/* Компоненты */
+@import "./components/form";
+/* Секции */
+@import "./sections/welcome";
+/* Модальные окна */
