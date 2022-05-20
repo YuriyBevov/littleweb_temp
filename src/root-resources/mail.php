@@ -33,8 +33,8 @@ try {
 
   // Настройки вашей почты
   $mail->Host       = 'smtp.timeweb.ru'; // SMTP сервера вашей почты
-  $mail->Username   = 'info@littleweb.ru'; // Логин на почте
-  $mail->Password   = 'Kerqw623N_001'; // Пароль на почте
+  $mail->Username   = 'info@littleweb.ru'; // Логин от почты
+  $mail->Password   = ''; // Пароль от почты
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
