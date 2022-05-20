@@ -13,16 +13,21 @@
     // colors
 
     --light-color: #fff;
-    --accent-color: #d52027;
+    --accent-color: #ff1654;
+    --warning-color: #EC9A29;
     --dark-color: #141024;
     --text-color: rgba(20, 16, 36, 0.7);
     --purple-color: #251b40;
     --white-color: #ffffff;
+    --success-color: #688e26;
+    --pink-color: #faaeae;
 
     --main-bg-color: var(--purple-color);
 
     // scrollbar
     --main-scrollbar-width: 6px;
-    --main-scrollbar-color: var(--light-color);
-    --main-scrollbar-thumb-color: var(--accent-color);
+    --main-scrollbar-color: var(--purple-color);
+    --main-scrollbar-thumb-color: var(--warning-color);
+
+    --main-transition: 0.2s ease-in;
   }

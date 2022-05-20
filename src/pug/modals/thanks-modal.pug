@@ -1,0 +1,16 @@
+.modal-overlay
+  .modal#thanks-modal.message-modal
+    .modal__header
+      .modal__success-image
+        svg(width="120" height="120")
+          use(xlink:href="./assets/svg-sprite.svg#icon-shape")
+
+        svg(width="60" height="60")
+          use(xlink:href="./assets/svg-sprite.svg#icon-success")
+      button(type="button").modal__close
+        svg(width="24" height="24")
+          use(xlink:href="./assets/svg-sprite.svg#icon-close")
+    .modal__content
+      .container
+        h2.lw-text-lg Спасибо, что обратились именно к&nbsp;нам!
+        p.lw-text-md Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время!

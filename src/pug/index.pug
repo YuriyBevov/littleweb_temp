@@ -2,9 +2,13 @@ extends layouts/main-layout.pug
 
 block variables
   -
-    const title = ""
-    const desc = ""
-    const keywords = ""
+    const title = "LittleWeb"
+    const desc = "Сообщество людей, неравнодушных к web"
+    const keywords = "Создание и поддержка сайтов, лендингов, посадочных страниц, интернет-магазинов. Верстка, дизайн, программирование, разработка сайтов, создание фирменного стиля компании."
 
 block content
   include ./sections/welcome
+
+block modals
+  include ./modals/thanks-modal
+  include ./modals/error-modal

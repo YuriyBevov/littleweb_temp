@@ -4,9 +4,9 @@ form {
 
   input {
     font-size: 14px;
+    line-height: 1;
     width: 100%;
     padding: 12px 20px;
-    padding-top: 16px;
     margin-bottom: 20px;
     border: 1px solid #251B40;
     border-radius: 30px;
@@ -14,7 +14,28 @@ form {
     background-color: var(--white-color);
 
     &::placeholder {
+      font-size: 14px;
+      line-height: 1;
       color: #A4A5AE;
+    }
+
+    &.js-invalid-control {
+
+      border-color: var(--accent-color);
+      animation: shake 0.3s ease-in-out;
+
+      &::placeholder {
+        color: var(--accent-color);
+      }
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(-10px); }
+      20% { transform: translateX(10px); }
+      40% { transform: translateX(-10px); }
+      60% { transform: translateX(10px); }
+      80% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
     }
   }
 

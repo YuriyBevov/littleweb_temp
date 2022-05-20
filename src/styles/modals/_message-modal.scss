@@ -1,0 +1,88 @@
+.message-modal {
+  position: relative;
+  height: fit-content;
+  max-height: 300px;
+  background-image: url('../assets/img/feedback-bg@1x.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+
+  .modal__content {
+    color: var(--purple-color);
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+
+    a {
+      display: block;
+      margin-top: 10px;
+      color: var(--accent-color);
+
+      transition: opacity var(--main-transition);
+
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &.is-active {
+    animation: showMessage 0.4s linear forwards;
+  }
+
+  @keyframes showMessage {
+      0% {
+          opacity: 0;
+          transform: translateY(50px);
+      }
+
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+}
+
+#thanks-modal {
+  padding-bottom: 20px;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: '';
+
+    width: 48px;
+    height: 48px;
+
+    background-image: url('../assets/img/icon-step.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+  }
+
+  .modal__content {
+    text-align: center;
+  }
+
+  .modal__success-image {
+    position: relative;
+    @extend .flex-centered-content;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+
+    svg:first-child {
+      fill: var(--pink-color);
+    }
+
+    svg:last-child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: var(--success-color);
+    }
+  }
+}
