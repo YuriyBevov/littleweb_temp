@@ -4,7 +4,6 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-$title = "Тема письма";
 $file = $_FILES['file'];
 
 $c = true;

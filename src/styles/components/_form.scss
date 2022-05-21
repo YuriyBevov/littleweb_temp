@@ -12,6 +12,7 @@ form {
     border-radius: 30px;
     color: #251B40 ;
     background-color: var(--white-color);
+    opacity: 0;
 
     &::placeholder {
       font-size: 14px;
@@ -51,6 +52,7 @@ form {
     color: #251B40;
     background-color: #EC9A29;
     cursor: pointer;
+    opacity: 0;
 
     transition: color 0.2s ease-in;
 

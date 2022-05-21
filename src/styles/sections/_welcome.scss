@@ -19,6 +19,7 @@
 
     &-title {
       padding-right: 60px;
+      opacity: 0;
 
       @include m-b-down(540px) {
         display: none;
